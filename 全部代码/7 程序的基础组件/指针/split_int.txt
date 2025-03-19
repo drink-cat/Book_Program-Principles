@@ -1,0 +1,9 @@
+
+
+[root@local pointer]# ./split_int 
+ int32 =  0X11111111  0XAAAAAAAA 
+ int32 =  0X33333333  0X22222222 
+ int32 =  0XCCCCBBBB  0XEEEEDDDD
+
+
+

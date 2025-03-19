@@ -1,0 +1,169 @@
+In archive my_static.a:
+
+bird.o:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000000000000 <bird_fly>:
+   0:	55                   	push   %rbp
+   1:	48 89 e5             	mov    %rsp,%rbp
+   4:	8b 05 00 00 00 00    	mov    0x0(%rip),%eax        # a <bird_fly+0xa>
+   a:	89 c6                	mov    %eax,%esi
+   c:	bf 00 00 00 00       	mov    $0x0,%edi
+  11:	b8 00 00 00 00       	mov    $0x0,%eax
+  16:	e8 00 00 00 00       	callq  1b <bird_fly+0x1b>
+  1b:	5d                   	pop    %rbp
+  1c:	c3                   	retq   
+
+Disassembly of section .data:
+
+0000000000000000 <bird_height>:
+   0:	b4 b3                	mov    $0xb3,%ah
+   2:	b2 b1                	mov    $0xb1,%dl
+
+Disassembly of section .rodata:
+
+0000000000000000 <.rodata>:
+   0:	42 69 72 64 20 69 73 	rex.X imul $0x20736920,0x64(%rdx),%esi
+   7:	20 
+   8:	66 6c                	data16 insb (%dx),%es:(%rdi)
+   a:	79 69                	jns    75 <bird_fly+0x75>
+   c:	6e                   	outsb  %ds:(%rsi),(%dx)
+   d:	67 20 61 74          	and    %ah,0x74(%ecx)
+  11:	20 68 65             	and    %ch,0x65(%rax)
+  14:	69 67 68 74 20 25 23 	imul   $0x23252074,0x68(%rdi),%esp
+  1b:	58                   	pop    %rax
+  1c:	20 0a                	and    %cl,(%rdx)
+	...
+
+Disassembly of section .comment:
+
+0000000000000000 <.comment>:
+   0:	00 47 43             	add    %al,0x43(%rdi)
+   3:	43 3a 20             	rex.XB cmp (%r8),%spl
+   6:	28 47 4e             	sub    %al,0x4e(%rdi)
+   9:	55                   	push   %rbp
+   a:	29 20                	sub    %esp,(%rax)
+   c:	34 2e                	xor    $0x2e,%al
+   e:	38 2e                	cmp    %ch,(%rsi)
+  10:	35 20 32 30 31       	xor    $0x31303220,%eax
+  15:	35 30 36 32 33       	xor    $0x33323630,%eax
+  1a:	20 28                	and    %ch,(%rax)
+  1c:	52                   	push   %rdx
+  1d:	65 64 20 48 61       	gs and %cl,%fs:0x61(%rax)
+  22:	74 20                	je     44 <bird_fly+0x44>
+  24:	34 2e                	xor    $0x2e,%al
+  26:	38 2e                	cmp    %ch,(%rsi)
+  28:	35 2d 34 34 29       	xor    $0x2934342d,%eax
+	...
+
+Disassembly of section .eh_frame:
+
+0000000000000000 <.eh_frame>:
+   0:	14 00                	adc    $0x0,%al
+   2:	00 00                	add    %al,(%rax)
+   4:	00 00                	add    %al,(%rax)
+   6:	00 00                	add    %al,(%rax)
+   8:	01 7a 52             	add    %edi,0x52(%rdx)
+   b:	00 01                	add    %al,(%rcx)
+   d:	78 10                	js     1f <.eh_frame+0x1f>
+   f:	01 1b                	add    %ebx,(%rbx)
+  11:	0c 07                	or     $0x7,%al
+  13:	08 90 01 00 00 1c    	or     %dl,0x1c000001(%rax)
+  19:	00 00                	add    %al,(%rax)
+  1b:	00 1c 00             	add    %bl,(%rax,%rax,1)
+  1e:	00 00                	add    %al,(%rax)
+  20:	00 00                	add    %al,(%rax)
+  22:	00 00                	add    %al,(%rax)
+  24:	1d 00 00 00 00       	sbb    $0x0,%eax
+  29:	41 0e                	rex.B (bad) 
+  2b:	10 86 02 43 0d 06    	adc    %al,0x60d4302(%rsi)
+  31:	58                   	pop    %rax
+  32:	0c 07                	or     $0x7,%al
+  34:	08 00                	or     %al,(%rax)
+	...
+
+dog.o:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000000000000 <dog_run>:
+   0:	55                   	push   %rbp
+   1:	48 89 e5             	mov    %rsp,%rbp
+   4:	8b 05 00 00 00 00    	mov    0x0(%rip),%eax        # a <dog_run+0xa>
+   a:	89 c6                	mov    %eax,%esi
+   c:	bf 00 00 00 00       	mov    $0x0,%edi
+  11:	b8 00 00 00 00       	mov    $0x0,%eax
+  16:	e8 00 00 00 00       	callq  1b <dog_run+0x1b>
+  1b:	5d                   	pop    %rbp
+  1c:	c3                   	retq   
+
+Disassembly of section .data:
+
+0000000000000000 <dog_speed>:
+   0:	d4                   	(bad)  
+   1:	d3 d2                	rcl    %cl,%edx
+   3:	d1                   	.byte 0xd1
+
+Disassembly of section .rodata:
+
+0000000000000000 <.rodata>:
+   0:	44 6f                	rex.R outsl %ds:(%rsi),(%dx)
+   2:	67 20 69 73          	and    %ch,0x73(%ecx)
+   6:	20 72 75             	and    %dh,0x75(%rdx)
+   9:	6e                   	outsb  %ds:(%rsi),(%dx)
+   a:	6e                   	outsb  %ds:(%rsi),(%dx)
+   b:	69 6e 67 20 61 74 20 	imul   $0x20746120,0x67(%rsi),%ebp
+  12:	73 70                	jae    84 <dog_run+0x84>
+  14:	65 65 64 20 25 23 58 	gs gs and %ah,%fs:0xa205823(%rip)        # a205840 <dog_run+0xa205840>
+  1b:	20 0a 
+	...
+
+Disassembly of section .comment:
+
+0000000000000000 <.comment>:
+   0:	00 47 43             	add    %al,0x43(%rdi)
+   3:	43 3a 20             	rex.XB cmp (%r8),%spl
+   6:	28 47 4e             	sub    %al,0x4e(%rdi)
+   9:	55                   	push   %rbp
+   a:	29 20                	sub    %esp,(%rax)
+   c:	34 2e                	xor    $0x2e,%al
+   e:	38 2e                	cmp    %ch,(%rsi)
+  10:	35 20 32 30 31       	xor    $0x31303220,%eax
+  15:	35 30 36 32 33       	xor    $0x33323630,%eax
+  1a:	20 28                	and    %ch,(%rax)
+  1c:	52                   	push   %rdx
+  1d:	65 64 20 48 61       	gs and %cl,%fs:0x61(%rax)
+  22:	74 20                	je     44 <dog_run+0x44>
+  24:	34 2e                	xor    $0x2e,%al
+  26:	38 2e                	cmp    %ch,(%rsi)
+  28:	35 2d 34 34 29       	xor    $0x2934342d,%eax
+	...
+
+Disassembly of section .eh_frame:
+
+0000000000000000 <.eh_frame>:
+   0:	14 00                	adc    $0x0,%al
+   2:	00 00                	add    %al,(%rax)
+   4:	00 00                	add    %al,(%rax)
+   6:	00 00                	add    %al,(%rax)
+   8:	01 7a 52             	add    %edi,0x52(%rdx)
+   b:	00 01                	add    %al,(%rcx)
+   d:	78 10                	js     1f <.eh_frame+0x1f>
+   f:	01 1b                	add    %ebx,(%rbx)
+  11:	0c 07                	or     $0x7,%al
+  13:	08 90 01 00 00 1c    	or     %dl,0x1c000001(%rax)
+  19:	00 00                	add    %al,(%rax)
+  1b:	00 1c 00             	add    %bl,(%rax,%rax,1)
+  1e:	00 00                	add    %al,(%rax)
+  20:	00 00                	add    %al,(%rax)
+  22:	00 00                	add    %al,(%rax)
+  24:	1d 00 00 00 00       	sbb    $0x0,%eax
+  29:	41 0e                	rex.B (bad) 
+  2b:	10 86 02 43 0d 06    	adc    %al,0x60d4302(%rsi)
+  31:	58                   	pop    %rax
+  32:	0c 07                	or     $0x7,%al
+  34:	08 00                	or     %al,(%rax)
+	...

@@ -1,0 +1,23 @@
+
+
+Symbol table '.symtab' contains 67 entries:
+   Num:    Value          Size Type    Bind   Vis      Ndx Name
+    51: 0000000000601038     4 OBJECT  GLOBAL DEFAULT   24 today
+    58: 000000000060103c     4 OBJECT  GLOBAL DEFAULT   24 degree
+    63: 0000000000601040     8 OBJECT  GLOBAL DEFAULT   24 cat_tom
+    64: 0000000000601048     8 OBJECT  GLOBAL DEFAULT   24 level
+
+
+[root@local pointer]# ./scan_mem 
+ addr  =  6295608 
+
+     today  =  11  
+    degree  =  22.22  
+   cat_age  =  55  
+ cat_height =  66.66  
+   level_1  =  0XAABBCCDD  
+   level_2  =  0X55667788
+
+
+
+

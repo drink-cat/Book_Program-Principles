@@ -1,0 +1,93 @@
+
+cat.o:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000000000000 <cat_run>:
+   0:	55                   	push   %rbp
+   1:	48 89 e5             	mov    %rsp,%rbp
+   4:	48 83 ec 10          	sub    $0x10,%rsp
+   8:	89 7d fc             	mov    %edi,-0x4(%rbp)
+   b:	8b 05 00 00 00 00    	mov    0x0(%rip),%eax        # 11 <cat_run+0x11>
+  11:	89 c2                	mov    %eax,%edx
+  13:	be 00 00 00 00       	mov    $0x0,%esi
+  18:	bf 00 00 00 00       	mov    $0x0,%edi
+  1d:	b8 00 00 00 00       	mov    $0x0,%eax
+  22:	e8 00 00 00 00       	callq  27 <cat_run+0x27>
+  27:	c9                   	leaveq 
+  28:	c3                   	retq   
+
+Disassembly of section .data:
+
+0000000000000000 <cat_name>:
+   0:	54                   	push   %rsp
+   1:	6f                   	outsl  %ds:(%rsi),(%dx)
+   2:	6d                   	insl   (%dx),%es:(%rdi)
+	...
+
+0000000000000010 <cat_speed>:
+  10:	74 73                	je     85 <cat_speed+0x75>
+  12:	72 71                	jb     85 <cat_speed+0x75>
+
+Disassembly of section .rodata:
+
+0000000000000000 <.rodata>:
+   0:	20 43 61             	and    %al,0x61(%rbx)
+   3:	74 20                	je     25 <cat_speed+0x15>
+   5:	25 73 20 69 73       	and    $0x73692073,%eax
+   a:	20 72 75             	and    %dh,0x75(%rdx)
+   d:	6e                   	outsb  %ds:(%rsi),(%dx)
+   e:	6e                   	outsb  %ds:(%rsi),(%dx)
+   f:	69 6e 67 20 61 74 20 	imul   $0x20746120,0x67(%rsi),%ebp
+  16:	73 70                	jae    88 <cat_speed+0x78>
+  18:	65 65 64 20 25 23 58 	gs gs and %ah,%fs:0xa205823(%rip)        # a205844 <cat_speed+0xa205834>
+  1f:	20 0a 
+	...
+
+Disassembly of section .comment:
+
+0000000000000000 <.comment>:
+   0:	00 47 43             	add    %al,0x43(%rdi)
+   3:	43 3a 20             	rex.XB cmp (%r8),%spl
+   6:	28 47 4e             	sub    %al,0x4e(%rdi)
+   9:	55                   	push   %rbp
+   a:	29 20                	sub    %esp,(%rax)
+   c:	34 2e                	xor    $0x2e,%al
+   e:	38 2e                	cmp    %ch,(%rsi)
+  10:	35 20 32 30 31       	xor    $0x31303220,%eax
+  15:	35 30 36 32 33       	xor    $0x33323630,%eax
+  1a:	20 28                	and    %ch,(%rax)
+  1c:	52                   	push   %rdx
+  1d:	65 64 20 48 61       	gs and %cl,%fs:0x61(%rax)
+  22:	74 20                	je     44 <cat_speed+0x34>
+  24:	34 2e                	xor    $0x2e,%al
+  26:	38 2e                	cmp    %ch,(%rsi)
+  28:	35 2d 34 34 29       	xor    $0x2934342d,%eax
+	...
+
+Disassembly of section .eh_frame:
+
+0000000000000000 <.eh_frame>:
+   0:	14 00                	adc    $0x0,%al
+   2:	00 00                	add    %al,(%rax)
+   4:	00 00                	add    %al,(%rax)
+   6:	00 00                	add    %al,(%rax)
+   8:	01 7a 52             	add    %edi,0x52(%rdx)
+   b:	00 01                	add    %al,(%rcx)
+   d:	78 10                	js     1f <.eh_frame+0x1f>
+   f:	01 1b                	add    %ebx,(%rbx)
+  11:	0c 07                	or     $0x7,%al
+  13:	08 90 01 00 00 1c    	or     %dl,0x1c000001(%rax)
+  19:	00 00                	add    %al,(%rax)
+  1b:	00 1c 00             	add    %bl,(%rax,%rax,1)
+  1e:	00 00                	add    %al,(%rax)
+  20:	00 00                	add    %al,(%rax)
+  22:	00 00                	add    %al,(%rax)
+  24:	29 00                	sub    %eax,(%rax)
+  26:	00 00                	add    %al,(%rax)
+  28:	00 41 0e             	add    %al,0xe(%rcx)
+  2b:	10 86 02 43 0d 06    	adc    %al,0x60d4302(%rsi)
+  31:	64 0c 07             	fs or  $0x7,%al
+  34:	08 00                	or     %al,(%rax)
+	...
