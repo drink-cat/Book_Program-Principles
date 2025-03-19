@@ -8,3 +8,6 @@ Contact Information:
 邮箱：503268771@qq.com
 
 Vx公众号：东方架构师
+
+
+本仓库所有文件均遵循 MIT 许可证（见 LICENSE 文件）
