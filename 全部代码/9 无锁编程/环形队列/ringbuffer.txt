@@ -1,0 +1,36 @@
+
+[root@local ringbuffer]# top -H -p 16912
+top - 11:50:50 up 19 days, 17:56,  1 user,  load average: 0.64, 0.36, 0.19
+Threads:   4 total,   1 running,   3 sleeping,   0 stopped,   0 zombie
+%Cpu(s): 34.3 us,  1.0 sy,  0.0 ni, 64.7 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
+KiB Mem :  2851708 total,   636536 free,   453936 used,  1761236 buff/cache
+KiB Swap:  2097148 total,  2097148 free,        0 used.  2072052 avail Mem 
+
+   PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND                                                          
+ 16913 root      20   0   96632    396    312 R 92.3  0.0   0:29.63 ringbuffer                                                       
+ 16912 root      20   0   96632    396    312 S  0.0  0.0   0:00.00 ringbuffer                                                       
+ 16914 root      20   0   96632    396    312 S  0.0  0.0   0:00.00 ringbuffer                                                       
+ 16915 root      20   0   96632    396    312 S  0.0  0.0   0:00.00 ringbuffer 
+
+
+[root@local ringbuffer]# ./ringbuffer 
+ process = 16912 
+ thread = 16913 Produce seq = 1 msg = Msg-16913-1 
+ thread = 16915 Consume seq = 1 msg = Msg-16913-1 
+ thread = 16913 Produce seq = 2 msg = Msg-16913-2 
+ thread = 16913 Produce seq = 3 msg = Msg-16913-3 
+ thread = 16913 Produce seq = 4 msg = Msg-16913-4 
+ thread = 16913 Produce seq = 5 msg = Msg-16913-5 
+ thread = 16913 Produce seq = 6 msg = Msg-16913-6 
+ thread = 16914 Consume seq = 2 msg = Msg-16913-2 
+ thread = 16915 Consume seq = 3 msg = Msg-16913-3 
+ thread = 16913 Produce seq = 7 msg = Msg-16913-7 
+ thread = 16914 Consume seq = 4 msg = Msg-16913-4 
+ thread = 16913 Produce seq = 8 msg = Msg-16913-8 
+ thread = 16915 Consume seq = 5 msg = Msg-16913-5 
+ thread = 16913 Produce seq = 9 msg = Msg-16913-9 
+
+
+
+
+

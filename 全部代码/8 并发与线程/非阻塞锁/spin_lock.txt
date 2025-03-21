@@ -1,0 +1,12 @@
+
+spinlock_aa:
+	.long	3333
+
+
+[root@local lock]# ./spin_lock 
+ spinlock size = 4 
+ after init . value = 1 
+ after trylock . value = 0 
+ after unlock . value = 1 
+
+

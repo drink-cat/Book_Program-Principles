@@ -1,0 +1,30 @@
+
+[root@local thread]# ./thread 
+ process = 111723 
+ main thread = 111723 
+ thread = 111724  stack_addr = 0x7f68b0c5eeec 
+ thread = 111725  stack_addr = 0x7f68b045deec 
+ thread = 111726  stack_addr = 0x7f68afc5ceec 
+ threads  created 
+ input char to continue . 
+m
+ thread = 111724  cpu = 1  seq =  0 
+ thread = 111725  cpu = 2  seq =  1 
+ thread = 111726  cpu = 0  seq =  2 
+ thread = 111724  cpu = 1  seq =  3 
+ thread = 111725  cpu = 0  seq =  4 
+ thread = 111726  cpu = 2  seq =  5 
+ thread = 111724  cpu = 1  seq =  6 
+ thread = 111725  cpu = 0  seq =  7 
+ thread = 111726  cpu = 2  seq =  8 
+ thread = 111726  set  go_on = false 
+ thread = 111724  exit 
+ thread = 111725  exit 
+ thread = 111726  exit 
+ threads  exit 
+
+
+
+
+
+

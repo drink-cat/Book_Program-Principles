@@ -1,0 +1,22 @@
+
+
+
+[root@local fast_c]# ./fast 
+        int32_aa   addr = 6295612   value = 0X11223344  
+        int32_bb   addr = 6295616   value = 0X55667788  
+    int32_arr[0]   addr = 6295620   value = 0XCCCCCCCC  
+    int32_arr[1]   addr = 6295624   value = 0XDDDDDDDD  
+         cat_age   addr = 6295628   value = 0XA1A2A3A4  
+       cat_speed   addr = 6295632   value = 0XB1B2B3B4  
+
+ === after modify int32 ===
+
+        int32_aa   addr = 6295612   value = 0XAABBCCDD  
+       cat_speed   addr = 6295632   value = 0XC1C2C3C4  
+
+ === see func pointer ===
+
+ func Bird is flying at height 200 
+ func Cat is running at speed 300 
+
+

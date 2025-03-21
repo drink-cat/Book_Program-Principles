@@ -1,0 +1,10 @@
+
+
+atomic# ./atomic 
+ count before = 0 
+ count after  = 1800000 
+
+
+
+
+ 

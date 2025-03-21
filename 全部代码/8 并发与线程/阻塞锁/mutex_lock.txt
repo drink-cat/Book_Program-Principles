@@ -1,0 +1,25 @@
+
+mutexlock:
+	.long	1
+	.long	2
+	.long	3
+	.long	4
+	.long	5
+	.zero	20
+
+
+[root@local lock]# ./mutex_lock 
+ main os_tid = 40435 
+ pthread_mutex_t size = 40 
+ main init  __lock=0 __count=0 __owner=0 
+ main lock1  __lock=1 __count=1 __owner=40435 
+ main lock2  __lock=2 __count=2 __owner=40435 
+ main unlock1  __lock=2 __count=1 __owner=40435 
+ main unlock2  __lock=0 __count=0 __owner=0 
+ son os_tid = 40436  got lock 
+ son lock  __lock=2 __count=1 __owner=40436 
+ son os_tid = 40437  got lock 
+ son lock  __lock=2 __count=1 __owner=40437 
+
+
+

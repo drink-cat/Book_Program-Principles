@@ -1,0 +1,16 @@
+
+[root@local threadlocal]# ./threadlocal 
+ key_count = 0 
+ thread = 55269  count_addr = 0x7f90340008c0  count_value = 90000000 
+ thread = 55270  count_addr = 0x7f902c0008c0  count_value = 90000000 
+ thread = 55271  count_addr = 0x7f90300008c0  count_value = 90000000 
+ key_destroy  thread = 55270  arg_addr = 0x7f902c0008c0 
+ key_destroy  thread = 55269  arg_addr = 0x7f90340008c0 
+ key_destroy  thread = 55271  arg_addr = 0x7f90300008c0 
+
+
+
+
+
+
+

@@ -1,0 +1,23 @@
+[root@local thread]# ./io_busy 
+ main thread = 127740 
+ thread = 127741  file = ./io_file.txt  fd = 3 
+ thread = 127742  file = ./io_file.txt  fd = 4 
+ threads are created 
+
+
+top - 01:58:52 up 18 days,  8:04,  1 user,  load average: 1.48, 0.77, 0.52
+Threads:   3 total,   2 running,   1 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  9.2 us, 24.3 sy,  0.0 ni, 39.4 id, 23.7 wa,  0.0 hi,  3.4 si,  0.0 st
+KiB Mem :  2851708 total,   663856 free,   530264 used,  1657588 buff/cache
+KiB Swap:  2097148 total,  2097148 free,        0 used.  2003884 avail Mem 
+
+   PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND                                                                 
+127742 root      20   0   22900    392    312 R 44.3  0.0   0:25.54 io_busy                                                                 
+127741 root      20   0   22900    392    312 R 43.3  0.0   0:25.25 io_busy                                                                 
+127740 root      20   0   22900    392    312 S  0.0  0.0   0:00.00 io_busy  
+
+
+
+
+
+

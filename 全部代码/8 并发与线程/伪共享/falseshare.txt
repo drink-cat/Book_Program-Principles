@@ -1,0 +1,19 @@
+
+[root@local falseshare]# ./falseshare 
+ struct msg_with_pad size = 120 
+ struct msg_no_pad   size = 8 
+
+ with_pad cost_millis = 344 
+ no_pad   cost_millis = 911 
+
+[root@local falseshare]# ./falseshare 
+ struct msg_with_pad size = 120 
+ struct msg_no_pad   size = 8 
+
+ with_pad cost_millis = 309 
+ no_pad   cost_millis = 789 
+
+
+
+
+

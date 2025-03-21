@@ -1,0 +1,44 @@
+
+
+
+
+    // asm("movq %%rsp, %0 \n"
+    //     "movq %1, %%rsp \n"
+    //     : "=m"(from_co->rsp)
+    //     : "m"(to_co->rsp)
+    //     : "memory");
+
+
+
+[root@local coroutine]# ./co_main 
+ main at 0x7fff89497f7c 
+ ## create ##    Send_TCP_co  stack = 0XB16080 ~ 0XB17080 
+ ## create ##  Write_FILE_co  stack = 0XB17100 ~ 0XB18100 
+
+ ## resume ##   Write_FILE_co 
+ thread = 83942 co = Write_FILE_co  1  at 0xb180dc 
+
+ ## resume ##   Send_TCP_co 
+ thread = 83942 co =   Send_TCP_co  1  at 0xb1705c 
+
+ ## resume ##   Write_FILE_co 
+ thread = 83942 co = Write_FILE_co  2  at 0xb180d8 
+
+ ## resume ##   Send_TCP_co 
+ thread = 83942 co =   Send_TCP_co  2  at 0xb17058 
+
+ ## resume ##   Write_FILE_co 
+ thread = 83942 co = Write_FILE_co  3  at 0xb180d4 
+
+ ## clean ##  Write_FILE_co  
+
+ ## resume ##   Send_TCP_co 
+ thread = 83942 co =   Send_TCP_co  3  at 0xb17054 
+
+ ## clean ##  Send_TCP_co  
+
+ === co handler end === 
+
+
+
+

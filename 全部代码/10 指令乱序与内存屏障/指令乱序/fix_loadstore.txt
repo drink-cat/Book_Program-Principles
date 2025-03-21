@@ -1,0 +1,37 @@
+
+// 2个指令前后依赖
+func_load_store_depend:
+	movl	ee(%rip), %eax
+	leal	600(%rax), %edx
+	movl	%edx, ff(%rip)
+	ret
+
+// 2个指令之间调用函数
+func_load_store_func:
+	pushq	%rbx
+	movl	ee(%rip), %ebx
+	xorl	%eax, %eax
+	call	func_empty
+	movl	%ebx, %eax
+	movl	$600, ff(%rip)
+	popq	%rbx
+	ret
+
+// 使用内存屏障相关的关键字、标识符
+func_load_store_barrier:
+	movl	ee(%rip), %eax
+	movl	$600, ff(%rip)
+	ret
+
+// 使用内存屏障相关的指令
+func_load_store_barrier2:
+	movl	ee(%rip), %eax
+	mfence
+	movl	$600, ff(%rip)
+	ret
+
+
+
+
+
+

@@ -1,0 +1,19 @@
+
+
+[root@local cas]# ./multi_cas 
+Please choose use CAS or not : 0 = NoCAS  1 = YesCAS 
+0
+count  before = 0  after = 48224 
+
+[root@local cas]# ./multi_cas 
+Please choose use CAS or not : 0 = NoCAS  1 = YesCAS 
+0
+count  before = 0  after = 47135 
+
+[root@local cas]# ./multi_cas 
+Please choose use CAS or not : 0 = NoCAS  1 = YesCAS 
+1
+count  before = 0  after = 50000 
+
+
+

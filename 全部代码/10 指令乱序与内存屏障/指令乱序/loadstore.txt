@@ -1,0 +1,25 @@
+
+
+// loadstore
+int func_load_store()
+{
+    int tmp1 = ee;
+    // asm volatile(" mfence \n" : : : "memory"); // 有作用。2个结合
+    // asm volatile(" mfence \n"); // 不起作用。
+    // asm volatile(" lock ; addq $0, %%rsp " : : : "memory"); // 有作用。
+    // asm volatile(" addq $0, %%rsp " : : : "memory"); // 有作用。
+    asm volatile("" : : : "memory"); // 有作用。
+    // asm volatile(" lock ; ");        // 不起作用。
+    ff = 600;
+    return tmp1;
+}
+
+
+
+
+
+
+
+
+
+

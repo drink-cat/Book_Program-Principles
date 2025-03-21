@@ -1,0 +1,39 @@
+
+
+[root@local percpu]# ./percpu 
+ cpu_total    = 3 
+ section_size = 16 
+ array_ptr    = 0x1f7f010 
+
+ Thread-1 on CPU = 2 . load = 0x1f7f038 . cat = 0x1f7f030 
+ Thread-2 on CPU = 1 . load = 0x1f7f028 . cat = 0x1f7f020 
+ Thread-1 on CPU = 2 . load = 0x1f7f038 . cat = 0x1f7f030 
+ Thread-2 on CPU = 1 . load = 0x1f7f028 . cat = 0x1f7f020 
+ Thread-1 on CPU = 2 . load = 0x1f7f038 . cat = 0x1f7f030 
+ Thread-2 on CPU = 1 . load = 0x1f7f028 . cat = 0x1f7f020 
+
+ CPU = 0  array_element = 0x1f7f010  load = 0  cat.speed = 0 
+ CPU = 1  array_element = 0x1f7f020  load = 3  cat.speed = 3 
+ CPU = 2  array_element = 0x1f7f030  load = 3  cat.speed = 3 
+
+
+[root@local percpu]# ./percpu 
+ cpu_total    = 3 
+ section_size = 16 
+ array_ptr    = 0x13a5010 
+
+ Thread-1 on CPU = 0 . load = 0x13a5018 . cat = 0x13a5010 
+ Thread-2 on CPU = 2 . load = 0x13a5038 . cat = 0x13a5030 
+ Thread-2 on CPU = 1 . load = 0x13a5028 . cat = 0x13a5020 
+ Thread-1 on CPU = 1 . load = 0x13a5028 . cat = 0x13a5020 
+ Thread-2 on CPU = 1 . load = 0x13a5028 . cat = 0x13a5020 
+ Thread-1 on CPU = 2 . load = 0x13a5038 . cat = 0x13a5030 
+
+ CPU = 0  array_element = 0x13a5010  load = 1  cat.speed = 1 
+ CPU = 1  array_element = 0x13a5020  load = 3  cat.speed = 3 
+ CPU = 2  array_element = 0x13a5030  load = 2  cat.speed = 2 
+
+
+
+
+

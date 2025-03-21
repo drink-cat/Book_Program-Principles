@@ -1,0 +1,27 @@
+
+
+[root@local barrier]# ./cpu_reorder 
+主线程，开始。
+主线程，让子线程执行。  count=1 
+主线程，让子线程执行。  count=2 
+主线程，让子线程执行。  count=3 
+遇到情况：(read_aa == 0 && read_bb == 0)  count=3 
+线程2，退出。
+线程1，退出。
+主线程，退出。
+
+[root@local barrier]# ./cpu_reorder 
+主线程，开始。
+主线程，让子线程执行。  count=1 
+主线程，让子线程执行。  count=2 
+主线程，让子线程执行。  count=3 
+主线程，让子线程执行。  count=4 
+主线程，让子线程执行。  count=5 
+遇到情况：(read_aa == 0 && read_bb == 0)  count=5 
+线程1，退出。
+线程2，退出。
+主线程，退出。
+
+
+
+
