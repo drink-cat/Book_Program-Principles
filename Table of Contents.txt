@@ -1,0 +1,324 @@
+
+Table of Contents
+
+Author: Dai Xing
+Email: 503268771@qq.com
+
+============================================
+
+1. Prerequisites
+  1.1 Development Environment (4.5 pages)
+    1.1.1 Minimal Development Environment
+    1.1.2 Testing the Development Environment with a Hello Program
+  1.2 Learning Techniques (1 page)
+
+2. CPU and Memory
+  2.1 CPU (2 pages)
+    2.1.1 Components of the CPU
+    2.1.2 Viewing CPU Information Using Command-Line Tools
+  2.2 Virtual Memory (6 pages)
+    2.2.1 Memory Addresses and Page Tables
+    2.2.2 Simulating Page Table Functionality
+  2.3 Process Memory Layout (8 pages)
+    2.3.1 Components of Memory Layout
+    2.3.2 Viewing Process Memory Layout Using Command-Line Tools
+    2.3.3 Analyzing Process Memory Layout with C and Assembly
+  2.4 Endianness (9 pages)
+    2.4.1 Definition of Endianness
+    2.4.2 Endianness of Strings
+    2.4.3 Endianness of Integers
+    2.4.4 Advantages of Little-Endian
+    2.4.5 Converting Strings to Numbers
+    2.4.6 Reading/Writing Integers in Big-Endian
+
+3. Assembly Basics
+  3.1 Assembly Syntax Dialects (6.5 pages)
+    3.1.1 Similarities and Differences Between Syntax Dialects
+    3.1.2 Comparing Syntax Dialect Differences with Code
+  3.2 Assembly File Structure (6 pages)
+    3.2.1 Illustrating Assembly File Structure with Code
+    3.2.2 Customizing Sections of an Assembly File
+    3.2.3 Absolute Addressing vs. Relative Addressing
+  3.3 Register Classification (4 pages)
+    3.3.1 Integer Registers
+    3.3.2 Floating-Point Registers
+    3.3.3 Stack Registers
+    3.3.4 Instruction Pointer Register
+    3.3.5 Status Register
+  3.4 Assembly Data Types (4 pages)
+    3.4.1 Integer Types
+    3.4.2 Floating-Point Types
+    3.4.3 Array Types
+    3.4.4 String Types
+    3.4.5 Analyzing Data Types with Code
+  3.5 Assembly Instruction Naming Conventions (1.5 pages)
+
+4. Assembly Instructions
+  4.1 Move Instructions (5 pages)
+    4.1.1 Integer Move Instructions
+    4.1.2 Floating-Point Move Instructions
+  4.2 Addressing Instructions (3 pages)
+    4.2.1 Absolute Addressing
+    4.2.2 Relative Addressing
+  4.3 Integer Addition Instructions (7 pages)
+    4.3.1 Instruction Overview
+    4.3.2 Simple Addition
+    4.3.3 Complex Addition (bit-width, carry, zeroing, negative numbers, etc.)
+  4.4 Integer Subtraction Instructions (7 pages)
+    4.4.1 Instruction Overview
+    4.4.2 Simple Subtraction
+    4.4.3 Complex Subtraction
+  4.5 Integer Multiplication Instructions (9 pages)
+    4.5.1 Instruction Overview
+    4.5.2 Simple Multiplication
+    4.5.3 Complex Multiplication
+  4.6 Integer Division Instructions (7 pages)
+    4.6.1 Instruction Overview
+    4.6.2 Simple Division
+    4.6.3 Complex Division
+  4.7 Floating-Point Addition Instructions (2.5 pages)
+    4.7.1 Instruction Overview
+    4.7.2 Simple Addition
+  4.8 Floating-Point Subtraction Instructions (2 pages)
+    4.8.1 Instruction Overview
+    4.8.2 Simple Subtraction
+  4.9 Floating-Point Multiplication Instructions (2 pages)
+    4.9.1 Instruction Overview
+    4.9.2 Simple Multiplication
+  4.10 Floating-Point Division Instructions (2 pages)
+    4.10.1 Instruction Overview
+    4.10.2 Simple Division
+  4.11 Integer Conversion Instructions (6 pages)
+    4.11.1 Low to High Bit-Width (Zero Extension, Sign Extension)
+    4.11.2 High to Low Bit-Width (Using mov Truncation)
+    4.11.3 Analyzing with Assembly Code
+  4.12 Floating-Point Conversion Instructions (4 pages)
+    4.12.1 Instruction Overview
+    4.12.2 Analyzing with Assembly Code
+  4.13 Cross-Register Extension Instructions (3 pages)
+    4.13.1 Instruction Overview
+    4.13.2 Analyzing with Assembly Code
+  4.14 Increment Instructions (3 pages)
+    4.14.1 Instruction Overview
+    4.14.2 Analyzing with Assembly Code
+  4.15 Decrement Instructions (3 pages)
+    4.15.1 Instruction Overview
+    4.15.2 Analyzing with Assembly Code
+  4.16 Left Shift Instructions (5 pages)
+    4.16.1 Instruction Overview
+    4.16.2 Analyzing with Assembly Code
+  4.17 Right Shift Instructions (5 pages)
+    4.17.1 Instruction Overview
+    4.17.2 Analyzing with Assembly Code
+  4.18 Bitwise AND Instructions (3 pages)
+    4.18.1 Instruction Overview
+    4.18.2 Analyzing with Assembly Code
+  4.19 Bitwise OR Instructions (3 pages)
+    4.19.1 Instruction Overview
+    4.19.2 Analyzing with Assembly Code
+  4.20 Bitwise NOT Instructions (3 pages)
+    4.20.1 Instruction Overview
+    4.20.2 Analyzing with Assembly Code
+  4.21 Bitwise XOR Instructions (4 pages)
+    4.21.1 Instruction Overview
+    4.21.2 Analyzing with Assembly Code
+  4.22 Integer Comparison Instructions (7 pages)
+    4.22.1 Instruction Overview
+    4.22.2 Examining Multiple Comparison Instructions
+    4.22.3 Signed Integer Comparison
+    4.22.4 Unsigned Integer Comparison
+  4.23 Floating-Point Comparison Instructions (4 pages)
+    4.23.1 Instruction Overview
+    4.23.2 Examining Multiple Comparison Instructions
+    4.23.3 Signed Floating-Point Comparison
+  4.24 Jump Instructions (8.5 pages)
+    4.24.1 Instruction Overview
+    4.24.2 Out-of-Order Output Using Jump Instructions
+    4.24.3 Loop Accumulation Using Jump Instructions
+    4.24.4 Pattern Matching Using Jump Instructions
+  4.25 CAS Instructions (6 pages)
+    4.25.1 Instruction Overview
+    4.25.2 cmpxchg Instruction
+    4.25.3 xchg Instruction
+  4.26 Function Instructions (2.5 pages)
+    4.26.1 Instruction Overview
+    4.26.2 Analyzing with Assembly Code
+  4.27 Inline Assembly (5 pages)
+    4.27.1 Definition of Inline Assembly
+    4.27.2 Input and Output of Inline Assembly
+    4.27.3 Adding Two Floating-Point Numbers with Inline Assembly
+  4.28 Case Study: Integer Calculator (6 pages)
+    4.28.1 Functionality of the Integer Calculator
+    4.28.2 Implementation of the Integer Calculator
+  4.29 Case Study: Floating-Point Calculator (6 pages)
+    4.29.1 Functionality of the Floating-Point Calculator
+    4.29.2 Implementation of the Floating-Point Calculator
+  4.30 Case Study: String Comparator (5 pages)
+    4.30.1 Functionality of the String Comparator
+    4.30.2 Implementation of the String Comparator
+
+5. Compilation and Execution
+  5.1 ELF File Format (10.5 pages)
+    5.1.1 Definition and Structure of ELF
+    5.1.2 ELF Definition in Linux Kernel Source Code
+    5.1.3 Analyzing ELF Format with C and Assembly
+  5.2 Static Libraries (5.5 pages)
+    5.2.1 Definition of Static Libraries
+    5.2.2 Analyzing Static Libraries with C Programs
+  5.3 Dynamic Libraries (24.5 pages)
+    5.3.1 Essence of Dynamic Libraries
+    5.3.2 Simple Simulation of Dynamic Libraries with C Programs
+    5.3.3 Analyzing Complex Dynamic Libraries
+    5.3.4 Symbol Proxy Relationship Diagram
+    5.3.5 Symbols and Proxies in Dynamic Libraries
+    5.3.6 The shared_dance() Function in Dynamic Libraries
+    5.3.7 GOT Proxies in Dynamic Libraries
+    5.3.8 Symbols and Proxies in the Main File
+    5.3.9 The main_print() Function in the Main File
+    5.3.10 PLT Proxies in Dynamic Libraries
+  5.4 LDS Scripts (6 pages)
+    5.4.1 Definition of LDS Scripts
+    5.4.2 Analyzing LDS Scripts with C Programs
+  5.5 Disassembly (4 pages)
+    5.5.1 Definition of Disassembly
+    5.5.2 Analyzing Disassembly with C and Assembly
+
+6. Functions
+  6.1 Function Structure (2 pages)
+    6.1.1 Components of a Function
+    6.1.2 Analyzing Function Structure with C and Assembly
+  6.2 Function Names (3 pages)
+    6.2.1 Function Naming Rules
+    6.2.2 Comparing Function Names in C and C++
+  6.3 Function Bodies (4 pages)
+    6.3.1 Rules for Function Bodies
+    6.3.2 Comparing Multiple Functions with Different Bodies
+    6.3.3 Comparing Inline Functions and Regular Functions
+  6.4 Function Parameters (6 pages)
+    6.4.1 Parameter Passing Rules
+    6.4.2 Analyzing Parameter Count, Integer Parameters, and Floating-Point Parameters with C and Assembly
+    6.4.3 Using Custom Registers for Parameters in Assembly
+    6.4.4 Passing Parameters Exclusively via the Function Stack in Assembly
+  6.5 Function Return Values (6 pages)
+    6.5.1 Return Value Rules
+    6.5.2 Analyzing Simple Return Values with C and Assembly
+    6.5.3 Analyzing Complex Return Values with C and Assembly
+    6.5.4 Using a Custom Function Stack for Return Values in Assembly
+  6.6 Pass by Value vs. Pass by Reference (10.5 pages)
+    6.6.1 Definition of Pass by Value and Pass by Reference
+    6.6.2 Analyzing Numeric Variable Passing with C and Assembly
+    6.6.3 Analyzing struct Variable Passing with C and Assembly
+    6.6.4 Analyzing Read-Only Numeric Variables with C and Assembly
+  6.7 Function Stack (19 pages)
+    6.7.1 Function Stack, Stack Registers, and Stack Frames
+    6.7.2 Analyzing Stack Frame Structure with Assembly
+    6.7.3 Implementing Sequential Calls and Nested Calls
+    6.7.4 Analyzing Function Call Depth with C and Assembly
+    6.7.5 Analyzing Local Variable Address Order with C
+    6.7.6 Analyzing struct Attribute Address Order with C
+    6.7.7 Stack Size and Stack Overflow
+    6.7.8 Analyzing Omission of Function Stack Operations with Assembly
+
+7. Fundamental Program Components
+  7.1 Struct (18 pages)
+    7.1.1 Struct as a Contiguous Block of Memory
+    7.1.2 Analyzing Memory Order and Addresses of struct Attributes with C and Assembly
+    7.1.3 Traversing struct Attributes by Address with C and Assembly
+    7.1.4 Analyzing Parent-Child Structs and Base Addresses with C and Assembly
+    7.1.5 Analyzing Attribute Offsets and Read/Write with C and Assembly
+  7.2 Arrays (12 pages)
+    7.2.1 Arrays as a Contiguous Block of Memory
+    7.2.2 Analyzing Numeric Arrays with C and Assembly
+    7.2.3 Analyzing Arrays of Structs with C and Assembly
+    7.2.4 Analyzing Pass by Value and Pass by Reference with C and Assembly
+    7.2.5 Analyzing Out-of-Bounds Array Access with C and Assembly
+  7.3 Pointers (6.5 pages)
+    7.3.1 Pointers as Memory Addresses
+    7.3.2 Examining Multiple Pointer Types with C and Assembly
+    7.3.3 Traversing Memory with Pointers Using C and Assembly
+    7.3.4 Splitting Integers with Pointers in Assembly
+  7.4 Loops vs. Recursion (5.5 pages)
+    7.4.1 Differences Between Loops and Recursion
+    7.4.2 Analyzing Loops and Recursion Differences with C
+    7.4.3 Advantages and Applicable Scenarios of Recursion
+  7.5 CPU Cache (8 pages)
+    7.5.1 Definition of CPU Cache
+    7.5.2 Using Array Cache to Accelerate Numeric Computation
+    7.5.3 Collaboration of Multi-Level Caches
+  7.6 Indexing (7.5 pages)
+    7.6.1 Definition of Indexing
+    7.6.2 MySQL B+ Tree Index
+    7.6.3 Generating Point-Line Indexes for 2D Maps with Java
+  7.7 Object-Oriented Programming in C (7.5 pages)
+    7.7.1 Definition of Object-Oriented Programming
+    7.7.2 Implementing OOP with struct and Pointers
+    7.7.3 Analyzing Function Tables with C
+  7.8 The Secret of C's Efficiency (4.5 pages)
+    7.8.1 Summarizing C's Efficiency from an Assembly Perspective (data types, variable definitions, instruction operations, pointer operations, etc.)
+    7.8.2 Analyzing Efficiency Details with C and Assembly
+
+8. Concurrency and Threads
+  8.1 Concurrent Writes and CAS Instructions (5.5 pages)
+    8.1.1 Concurrent Writes Requiring CAS Instructions for Atomicity
+    8.1.2 Analyzing Multi-Threaded Increment of a Single Integer with C
+    8.1.3 CAS Instructions in Linux Kernel Source Code
+  8.2 Non-Blocking Locks and CAS Instructions (4 pages)
+    8.2.1 Definition of Non-Blocking Locks
+    8.2.2 Examining Non-Blocking Lock Definitions in glibc Source Code
+    8.2.3 Analyzing Non-Blocking Locks with C
+  8.3 Blocking Locks and CAS Instructions (7 pages)
+    8.3.1 Definition of Blocking Locks
+    8.3.2 Examining Blocking Lock Definitions in glibc Source Code
+    8.3.3 Analyzing Blocking Lock Usage with C and Assembly
+  8.4 False Sharing (5 pages)
+    8.4.1 Definition of False Sharing
+    8.4.2 Methods to Avoid False Sharing
+    8.4.3 Analyzing the Effect of Avoiding False Sharing with C
+  8.5 Thread Principles (14 pages)
+    8.5.1 Definition of Threads (definition, states, synchronization, stack, scheduling)
+    8.5.2 Thread Definitions in Linux Kernel Source Code
+    8.5.3 Thread Synchronization: Multiple Threads Alternating Output of Sequence Numbers
+    8.5.4 Analyzing CPU-Bound and I/O-Bound Workloads with C
+  8.6 Coroutine Principles (9 pages)
+    8.6.1 Definition of Coroutines (definition, core concepts, implementation approaches, diagrams, etc.)
+    8.6.2 Implementing Complete Coroutine Functionality with C and Assembly
+
+9. Lock-Free Programming
+  9.1 CPU Isolation (8 pages)
+    9.1.1 Definition and Diagram of percpu
+    9.1.2 percpu in Linux Kernel Source Code
+    9.1.3 Implementing Custom percpu with C and Assembly
+  9.2 Thread Isolation (4.5 pages)
+    9.2.1 Definition and Diagram of threadlocal
+    9.2.2 threadlocal in the Java Language
+    9.2.3 Implementing Custom threadlocal with C
+  9.3 Atomic Operations (4 pages)
+    9.3.1 Definition of Atomic Operations
+    9.3.2 Implementing Custom Atomic Operations with C and Assembly
+  9.4 Ring Buffer (5.5 pages)
+    9.4.1 Definition and Diagram of Ring Buffer
+    9.4.2 Implementing Custom Ring Buffer with C and CAS Instructions
+
+10. Instruction Reordering and Memory Barriers
+  10.1 Instruction Reordering (6 pages)
+    10.1.1 Classification of Instruction Reordering (compile-time, run-time)
+    10.1.2 Intuitive Understanding of Instruction Reordering with C and Assembly
+    10.1.3 Analyzing load and store with C and Assembly
+    10.1.4 Analyzing Methods to Prevent Instruction Reordering with C and Assembly
+  10.2 Memory Barriers (10 pages)
+    10.2.1 Memory Barrier Instructions
+    10.2.2 Analyzing Run-Time Instruction Reordering with C and Assembly
+    10.2.3 Resolving Run-Time Instruction Reordering with Memory Barrier Instructions
+  10.3 Memory Barriers in Linux Kernel Source Code (3 pages)
+    10.3.1 Definition of Memory Barriers
+    10.3.2 Examples of Memory Barrier Usage
+  10.4 The volatile Keyword in C (5 pages)
+    10.4.1 Explanation of the volatile Keyword in C
+    10.4.2 Analyzing Scenarios Without volatile Using C and Assembly
+    10.4.3 Analyzing Scenarios With volatile Using C and Assembly
+  10.5 The volatile Keyword in Java (5 pages)
+    10.5.1 Explanation of the volatile Keyword in Java
+    10.5.2 Examining volatile in JVM Source Code
+    10.5.3 Examining volatile in JDK Source Code
+    10.5.4 Analyzing the Impact of volatile with Java
+
